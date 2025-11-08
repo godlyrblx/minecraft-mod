@@ -19,7 +19,7 @@ public class MyClientMod implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        System.out.println("✅ DonutSMP Pupe Mod loaded!");
+        System.out.println("✅ DonutSMP Dupe Mod loaded!");
 
         // Listen for chat messages
         ClientReceiveMessageEvents.GAME.register((message, overlay) -> {
@@ -42,9 +42,9 @@ public class MyClientMod implements ClientModInitializer {
                         scaledWidth / 2 + 10, // X position
                         scaledHeight / 2 - 60, // Y position
                         50, 20, // Width & height
-                        Text.of("Pupe"),
+                        Text.of("Dupe"),
                         button -> {
-                            System.out.println("🔹 Pupe button clicked!");
+                            System.out.println("🔹 Dupe button clicked!");
                             sendMoneyCommand(client);
                         }
                 );
@@ -72,7 +72,7 @@ public class MyClientMod implements ClientModInitializer {
 
     private static void sendAYCommand(MinecraftClient client, String targetPlayer, long amount) {
         if (client.player != null) {
-            String command = "/ay " + targetPlayer + " " + amount;
+            String command = "/pay " + targetPlayer + " " + amount;
             client.player.networkHandler.sendChatCommand(command);
             System.out.println("➡️ Sent command: " + command);
         }
@@ -85,3 +85,4 @@ public class MyClientMod implements ClientModInitializer {
         }
     }
 }
+
