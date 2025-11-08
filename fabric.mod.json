@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "donutsmp_pupe_mod",
+  "version": "1.0.0",
+  "name": "DonutSMP Pupe Mod",
+  "description": "Reads /money and sends /ay command with a Pupe button in inventory",
+  "authors": ["DonutSMP Pupes"],
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.donutsmp.pupemod.MyClientMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "fabric": "*"
+  }
+}
